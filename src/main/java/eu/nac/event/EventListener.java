@@ -14,7 +14,11 @@ import org.bukkit.event.player.PlayerQuitEvent;
 public class EventListener implements Listener {
     public EventListener() {
         ProtocolLibrary.getProtocolManager().addPacketListener(new PacketAdapter(
-                NAC.INSTANCE.getPlugin()
+                NAC.INSTANCE.getPlugin(),
+                PacketType.Play.Client.FLYING,
+                PacketType.Play.Client.POSITION,
+                PacketType.Play.Client.LOOK,
+                PacketType.Play.Client.POSITION_LOOK
         ) {
             @Override
             public void onPacketReceiving(final PacketEvent e) {
