@@ -1,0 +1,6 @@
+name: NAC
+version: '${project.version}'
+main: eu.nac.NACPlugin
+api-version: 1.18
+authors: [ Nobody ]
+description: A normal minecraft anticheat.
